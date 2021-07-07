@@ -6,15 +6,15 @@
 /* if you see anything that needs to be updated, DM Shady#0690 on discord, I'll update it. */
 
 :root {
-    --health-color: #FFF; /* not really used so don't really bother changing this */
-    --ammo-color: #fff; /* not really used so don't really bother changing this */
-    --premium-color: #fbc02d; /* not really used so don't really bother changing this */
-    --verified-color: #40c4ff; /* not really used so don't really bother changing this */
-    --verified-clan-color: #fbc02d; /* not really used so don't really bother changing this */
-    --menu-bg-color: rgba(15, 15, 15, .2); /* not really used so don't really bother changing this */
-    --menu-bg-color-secondary: rgba(0, 0, 0, .5); /* not really used so don't really bother changing this */
-    --ingame-bg-color: rgba(15, 15, 15,.2); /* not really used so don't really bother changing this */
-    --text-transform: none; /* not really used so don't really bother changing this */
+    --health-color: #FFF; /* not really used so don't bother changing this */
+    --ammo-color: #fff; /* not really used so don't bother changing this */
+    --premium-color: #fbc02d; /* not really used so don't bother changing this */
+    --verified-color: #40c4ff; /* not really used so don't bother changing this */
+    --verified-clan-color: #fbc02d; /* not really used so don't bother changing this */
+    --menu-bg-color: rgba(15, 15, 15, .2); /* not really used so don't bother changing this */
+    --menu-bg-color-secondary: rgba(0, 0, 0, .5); /* not really used so don't bother changing this */
+    --ingame-bg-color: rgba(15, 15, 15,.2); /* not really used so don't bother changing this */
+    --text-transform: none; /* not really used so don't bother changing this */
     --accent: #00FFFF;
     --accent-hover: #ff00ff;
 }
