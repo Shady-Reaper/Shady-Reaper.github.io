@@ -1,0 +1,2519 @@
+/* updated 07/07/2021 */
+/* this css is made for MTZ Krunker (MTZ font, MTZ chat) and the format is made for mtz. */
+
+/* now for the boring stuff: don't copy my code without permission, or without giving appropriate credit to Shady#0690. Enjoy! */
+
+/* if you see anything that needs to be updated, DM Shady#0690 on discord, I'll update it. */
+
+:root {
+    --health-color: #FFF; /* not really used so don't really bother changing this */
+    --ammo-color: #fff; /* not really used so don't really bother changing this */
+    --premium-color: #fbc02d; /* not really used so don't really bother changing this */
+    --verified-color: #40c4ff; /* not really used so don't really bother changing this */
+    --verified-clan-color: #fbc02d; /* not really used so don't really bother changing this */
+    --menu-bg-color: rgba(15, 15, 15, .2); /* not really used so don't really bother changing this */
+    --menu-bg-color-secondary: rgba(0, 0, 0, .5); /* not really used so don't really bother changing this */
+    --ingame-bg-color: rgba(15, 15, 15,.2); /* not really used so don't really bother changing this */
+    --text-transform: none; /* not really used so don't really bother changing this */
+    --accent: #00FFFF;
+    --accent-hover: #ff00ff;
+}
+
+@font-face{font-family:gamefont;src:url(./fonts/font2.ttf)}@font-face{font-family:headerfont;src:url(./fonts/header.ttf)}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.material-icons[style*="color:#40C4FF"] {
+    color: var(--verified-color) !important;
+}
+
+#timerDisplay {
+    text-align: center;
+    position: fixed;
+    transform: translateX(-50%);
+    top: 80%;
+    left: 50%;
+    padding: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: transparent;
+    will-change: unset;
+}
+
+#timerVal {
+    font-size: 36px;
+    padding-left: 0;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+    will-change: unset;
+}
+
+#timerIcon {
+    display: none;
+}
+
+#teamScores {
+    background-color: var(--ingame-bg-color);
+    border-radius: 0;
+}
+
+.tScoreC {
+    background-color: #eb5656;
+}
+
+.tScoreC.you {
+    background-color: #fff;
+}
+
+#leaderDisplay {
+    border-radius: 0;
+    background-color: var(--ingame-bg-color);
+}
+
+.leaderName {
+    color: #eb5656;
+}
+
+.leaderNameF {
+    color: #fff;
+}
+
+.newLeaderContainer {
+    border-radius: 0;
+    background-color: var(--ingame-bg-color);
+}
+
+.newLeaderName {
+    color: var(--accent);
+}
+
+.newLeaderNameF {
+    color: #fff !important;
+}
+
+#leaderContainer i[style*="color:#FBC02D"] {
+    color: var(--premium-color) !important;
+}
+
+#leaderContainer i[style*="color:#40C4FF"] {
+    color: var(--verified-color) !important;
+}
+
+
+.leaderName span[style*='color:#FBC02D'],
+.leaderNameM span[style*='color:#FBC02D'],
+.newLeaderNameM span[style*='color:#FBC02D'],
+.leaderNameF span[style*='color:#FBC02D'],
+.newLeaderNameF span[style*='color:#FBC02D'] {
+    color: var(--verified-clan-color) !important;
+}
+
+.endTableN span {
+    background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+    animation: gradient-border 1.7s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+.teamTotals {
+    background-color: var(--menu-bg-color-secondary);
+    border-radius: 0;
+}
+
+.endCard span {
+	color: var(--accent) !important;
+}
+
+.xpEndBar span {
+	color: #fff !important;
+}
+
+.endCard td {
+	color: #fff;
+}
+
+.teamTotalN0 {
+    color: #fff;
+}
+
+.teamTotalN1 {
+    color: #eb5656;
+}
+
+#endUi {
+	background-color: transparent
+}
+
+.endCard .material-icons {
+	color: var(--accent) 
+}
+
+#endTimer {
+    color: #fff;
+    text-shadow: none;
+    font-style: normal;
+}
+
+#endTable {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.endTableN[style*='color:rgba(255,255,255,0.6)'] {
+    color: #fff !important;
+}
+
+.endCard {
+    left: 50% !important;
+    background-color: var(--menu-bg-color-secondary);
+    border-radius: 0;
+}
+
+#medalTable {
+    background-color: transparent;
+}
+
+#matchVoteHolder {
+    background-color: transparent;
+}
+
+.matchVote {
+    margin-right: 0;
+    border-radius: 0;
+    text-shadow: none;
+}
+
+.matchVoteThumb {
+    border-radius: 0;
+}
+
+.countIcon {
+    background-color: var(--ingame-bg-color);
+    border-radius: 0;
+    padding: 7px;
+}
+
+#deathsVal,
+#killsVal,
+#livesDisp,
+#myScoreVal {
+    bottom: 7px;
+    position: relative;
+}
+
+#streakCount {
+    position: fixed;
+    transform: translateX(-50%);
+    top: 85%;
+    left: 50%;
+    background-color: transparent;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#streakIcon {
+    filter: drop-shadow(2px 2px 3px rgba(30, 30, 30, .5));
+
+}
+
+.kfItem {
+    border-radius: 0;
+    background-color: var(--ingame-bg-color);
+}
+
+#hudClassIcon {
+    display: none;
+}
+
+#healthValueHolder {
+    background-color: transparent;
+    width: 100px;
+    height: 65px;
+    border-radius: 0;
+    position: fixed;
+    left: 30%;
+    bottom: 25%;
+    padding: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    align-items: center;
+}
+
+#healthValue {
+    color: var(--health-color);
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+    margin-top: 0;
+    will-change: unset;
+}
+
+#maxHP {
+    display: none;
+}
+
+#challIcon {
+    display: none !important;
+}
+
+#healthBar {
+    display: none;
+}
+
+#ammoDisplay {
+    background-color: transparent;
+    letter-spacing: 2px;
+    width: 100px;
+    height: 65px;
+    border-radius: 0;
+    position: fixed;
+    right: 31%;
+    bottom: 25%;
+    padding: 0;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+#ammoVal {
+    color: var(--ammo-color);
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-left: 12px;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#ammoMax {
+    display: none;
+}
+
+#ammoIcon {
+    display: none;
+}
+
+#killStreakHolder {
+    position: fixed;
+    left: 53%;
+    top: 80%;
+}
+
+.killStreakItem {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+}
+
+#reloadMsg {
+    background: transparent !important;
+}
+
+#chatInput {
+    background-color: var(--ingame-bg-color) !important;
+    font-size: 20px;
+}
+
+#chatInput::placeholder {
+    color: rgba(255, 255, 255) !important;
+    text-transform: var(--text-transform);
+}
+
+#chatHolder {
+    bottom: 20px !important;
+    left: 20px;
+}
+
+.chatItem {
+    border-radius: 0;
+    font-size: 20px;
+}
+
+.chatMsg span[style*="color:#9eeb56"] {
+    color: #fff !important;
+}
+
+#weapDisplay {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.weapItem {
+	margin-top: 0;
+}
+
+.weapKey {
+	display: none;
+}
+
+.weapIcon {
+	width: 100px;
+	height: 50px
+}
+
+#voiceDisplay {
+    display: none;
+}
+
+.readAll {
+    background-color: transparent;
+    color: #fff;
+}
+
+.readAll:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+#specStats {
+    position: fixed!important;
+    left: 1700px;
+    top: 1110px;
+    background-color: transparent;
+}
+
+#youNewDiv {
+    display:none!important;
+}
+
+#specTeam1{
+	position: absolute!important;
+	right: 195px;
+	top: 900px;
+}
+
+#specTeam0 {
+	position: absolute!important;
+	right: 195px;
+	top: 1000px;
+}
+
+#specTeam1, #specTeam0, #specStats{
+    opacity: 100%;
+}
+
+
+#specNames, #spec0, #spectateInfo, #spec1, #specContr {
+    display: none !important;
+}
+
+#specGameInfo {
+ 	color: #fff !important;
+}
+
+#specTeam0 .material-icons,
+#specTeam1 .material-icons {
+	color: var(--accent) !important;
+}
+
+.specLevelBox {
+	background-color: transparent
+}
+
+.spectPIcon {
+	background-color: transparent !important;
+}
+
+#instructions {
+  visibility: hidden;
+}
+#instructions:after {
+  visibility: visible;
+  content: 'GOOD LUCK';
+  color: var(--accent);
+  transform:translateX(-50%);
+  position:fixed;
+  left:50%;
+}
+
+.mapListItem {
+	filter: grayscale(1) !important
+}
+
+.mapListItem:hover {
+	filter: none !important
+}
+
+.mapActionOvrl {
+	visibility: hidden
+}
+
+.mapListItem:hover> .mapActionOvrl {
+	visibility: visible;
+	height: 80px;
+	background-color: transparent;
+	color: transparent
+}
+
+.mapActionOvrl .material-icons {
+	color: var(--accent) !important;
+}
+
+#mainLogo {
+	display: none
+}
+
+.menuLink {
+	color: var(--accent) !important
+}
+
+div span {
+	color: #FFF !important
+}
+
+.settingsHeader {
+	background-color: transparent !important
+}
+
+.settingsBtn {
+	background-color: transparent;
+	color: var(--accent) !important
+}
+
+#requiresRestart {
+	display: none
+}
+
+
+
+.cretrLnk {
+	color: var(--accent) !important
+}
+
+.mapAgeD {
+	display: none
+}
+
+.bigMenTab .material-icons {
+	color: var(--accent) !important
+}
+.bigMenTab:hover> .material-icons {
+	color: var(--accent-hover) !important
+}
+
+[style*="color:#9eeb56"] {
+	color: #fff !important;
+}
+
+[style*="color:#eb5656"] {
+	color: var(--accent) !important;
+}
+
+[style*="color:#ff4400"] {
+	color: transparent !important;
+}
+
+[style*="color:#6441A5"] {
+	color: var(--accent) !important;
+}
+
+.tabHolder {
+	background-color: transparent !important;
+}
+
+[style*="color:rgba(255,255,255,0.7)"] {
+	color: #fff !important;
+}
+
+.newLeaderNoPlayers {
+	color: #fff !important
+}
+
+.modeStatus,
+#endTimer,
+.fundsVal,
+.crLabel {
+	color: var(--accent) !important
+}
+
+.xpEndBarV {
+	color: #fff
+}
+
+.xpEndBarB {
+	border-radius: 30px;
+	background-color: var(--accent) !important
+}
+
+.serverHeader {
+	background-color: transparent
+}
+
+.xpLvl {
+	color: #fff !important
+}
+
+.custContainer {
+	border: none;
+	background-color: transparen;
+	filter: none;
+	opacity: 1
+}
+
+.crStat,
+#kdLayout {
+	border: 2px solid var(--accent)
+}
+
+.custContainer:hover {
+	border-bottom: 4px solid var(--accent)
+}
+
+.mapFndB {
+	background-color: transparent !important;
+	color: var(--accent) !important
+}
+
+.downloadClient,
+.discordSocial,
+.redditSocial,
+.verticalSeparator {
+    display:none !important
+}
+
+#aContainer {
+    visibility: hidden;
+}
+
+#seasonLabel {
+    display:none;
+}
+
+#ot-sdk-btn-floating.ot-floating-button {
+	display: none !important;
+}
+
+#newsHolder,
+#editorBtnM,
+#streamContainer,
+#helpGuidOpn,
+#helpTxtHol,
+.youNewDiv,
+#aContainer,
+#instructionHolder,
+#ad_position_box,
+#faceItIconM,
+#menuMiniProfilePic,
+.krSocial {
+    display: none;
+}
+
+#loadingBg {
+	background-image: url(https://cdn.discordapp.com/attachments/815739824812064778/848396298712776704/lollll_2.jpg);
+	background-color: transparent !important;
+    opacity: 1 !important;
+    z-index: 10
+}
+
+* {
+    outline: none;
+    font-family: gamefont;
+    color: #353535;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: url(https://cdn.discordapp.com/attachments/815739824812064778/839607091772522506/cursor_1_5.png)
+}
+
+span,
+div,
+a {
+    color: var(--accent)
+}
+
+#aContainer {
+    display:none !important
+}
+
+#braveWarning {
+    display:none !important
+}
+
+#menuPingText:after {
+	content: ' ms ';
+	color: #fff;
+}
+
+::-webkit-scrollbar {
+	display: none !important
+}
+
+#reloadMsg {
+    background: transparent !important;
+}
+
+#weapDisplay {
+    bottom: 50%;
+    transform: translateY(50%);
+    transform: scale(1.3)
+}
+
+.weapItem {
+	margin-top: 0;
+}
+
+.weapKey {
+	display: none;
+}
+
+.weapIcon {
+	width: 100px;
+	height: 50px
+}
+
+#voiceDisplay {
+    display: none;
+}
+
+#weapDisplay {
+    display: flex !important;
+    flex-direction: row !important;
+    bottom: -61px;
+    right: 50.5%;
+    transform: translateX(50%);
+}
+
+.weapItem {
+    margin-top: 0;
+}
+
+.weapIcon[style*="opacity: 1"] {
+    margin-right: 0px !important;
+    position: fixed;
+    right: 50%;
+    transform: translate(50%, -70px) scale(1.3);
+    transition: transform 0.5s;
+}
+
+.weapIcon[style*="opacity: 0.7"] {
+    align-items: center;
+    margin-right: 0px !important;
+}
+
+.weapKey {
+    display: none;
+}
+
+.weapIcon {
+    width: 100px;
+    height: 50px;
+    transform: scale(1.3);
+    filter: brightness(0) drop-shadow(-2px 0px 1px var(--accent)) drop-shadow(2px 0px 1px var(--accent));
+}
+
+.headShotChatIcon, .thrownChatIcon, .fistChatIcon, .weaponChatIcon, .meleeChatIcon {
+    filter: brightness(0) drop-shadow(-2px 0px 1px var(--accent)) drop-shadow(2px 0px 1px var(--accent));
+}
+
+.quickJoin {
+	display: none
+}
+
+.serverPing {
+	display: none !important
+}
+
+#chatSwitch.material-icons::after {
+	display: none !important
+}
+
+#reloadMsg {
+        webkit-animation: rainbowT .5s linear infinite;
+    animation: rainbowT .5s linear infinite;
+    background-color: transparent;
+    position: fixed !important;
+    bottom: 80px
+}
+
+.chalImgC,
+.modeIcon {
+	background-color: transparent;
+	filter: grayscale(1) brightness(0) drop-shadow(0px 0px 2px var(--accent)) drop-shadow(0px 0px 4px var(--accent));
+}
+
+.chalImgC {
+    border: none
+}
+
+.tabHeader {
+	color: #fFF !important
+}
+
+.tabHeader.selected {
+	color: var(--accent) !important;
+	border-bottom: 5px solid var(--accent)
+}
+
+#kCInfoS {
+	color: var(--accent) !important
+}
+
+@keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
+
+.newLeaderNameM span {
+    background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+    animation: gradient-border 1.7s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
+.newLeaderContainer .material-icons {
+	color: var(--accent) !important;
+}
+
+#accManagerBtn {
+    position: absolute!important;
+    top: -210px;
+    right: 50px;
+    width: 100px!important;
+    opacity: 0%;
+}
+
+#killFeed {
+    background-color: #000;
+    border: 3px solid var(--accent);
+    border-radius: 15px;
+    color: #fff !important;
+    transform: scale(0.9)
+}
+
+#streakVal,
+#deathsVal,
+#killsVal {
+	color: var(--accent);
+	background-color: transparent;
+	transform: scale(0.8) !important;
+}
+
+.kCStat {
+    color: #fff
+}
+
+input:checked +.matchVoteThumb {
+    border: 3px solid var(--accent) !important;
+    border-radius: 1px solid;
+}
+
+#streakIcon {
+	display: none
+}
+
+#streakVal {
+	font-size: 25px 
+}
+
+#streakCount {
+    position: fixed;
+    transform: translateX(-50%) scale(1.2);
+    top: 85%;
+    left: 50%;
+    background-color: transparent;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+.tScoreV2 {
+	color: #fff !important
+}
+
+#ingameFPS {
+	color: var(--accent) !important;
+}
+
+#fpsDisplay {
+	color: #fff !important;
+}
+
+#pingText {
+	color: var(--accent) !Important;
+}
+
+#pingIcon {
+	color: #fff !important;
+}
+
+.countIcon {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 7px;
+}
+
+#curGameInfo {
+    display: none
+}
+
+#deathCount,
+#killCount {
+	background-color: transparent !important;
+}
+
+#killCardKick,
+#killCardKick span {
+	color: var(--accent) !important;
+}
+
+#killCardBy {
+	color: var(--accent) !important;
+	z-index: 30
+}
+
+#killCard .newLeaderNameF {
+	color: #fff !important;
+}
+
+.killCardKick {
+    color: var(--accent) !important;
+}
+
+#killCard {
+    background-color: #000;
+    border: 3px solid var(--accent);
+    border-radius: 10px;
+    z-index: 10
+}
+
+.kCName {
+    color: #fff;
+}
+
+.kCInfo,
+.kCLvl {
+    color: #fff;
+}
+
+#termsInfo:before {
+	content: 'FilaDanner on Twitch';
+	font-size: 20px;
+	color: #fff;
+	position: fixed;
+	right: 15px;
+	bottom: 290px;
+	display: block;
+}
+
+
+#mapInfo {
+	visibility: hidden
+}
+
+#mapInfo::after {
+	visibility: visible;
+	content: 'Css by Shady#0690'
+}
+
+#termsInfo {
+	background-color: transparent;
+}
+
+.terms {
+	text-decoration: none !important;
+}
+
+.terms:hover {
+	transform: scale(0.9);
+}
+
+.verticalSeparatorInline {
+	display: none;
+}
+
+.terms {
+	font-size: 0;
+	transition-duration: 0.25s;
+}
+
+.terms:last-child {
+	font-size: 20px;
+}
+
+.terms {
+	color: #fff !important
+}
+
+.terms:hover {
+	color: var(--accent) !important
+}
+
+#termsInfo:hover .terms {
+	font-size: 20px;
+}
+
+.menuItem {
+	background-color: transparent
+}
+
+.menuItem:hover {
+	background-color: rgb(0 0 0 / 20%);
+	border: 3px solid var(--accent)
+}
+
+.menuItemIcon {
+	display: none
+}
+
+.menuItemTitle {
+	color: var(--accent) !important
+}
+
+.button.small {
+	background-color: transparent !important;
+	box-shadow: none !important
+}
+
+.button.small:hover {
+    background-color: var(--accent) !important;
+}
+
+#specGMessage,
+#gameMessage {
+    color: var(--accent) !important
+}
+
+.newLeaderContainer {
+    background-color: rgb(0 0 0 / 20%);
+    border: 3px solid var(--accent);
+    border-radius: 10px
+}
+
+.newLeaderTeam {
+    color: var(--accent) !important;
+}
+
+#endAContainer {
+    display: none !important
+}
+
+.newLeaderCounter {
+    color: #FFF !important;
+}
+
+.newLeaderScore {
+    color: #fff !important;
+}
+
+#instructionHolder {
+    background-color: rgb(0 0 0 / 30%)
+}
+
+#instructionsUpdate {
+    background-color: transparent;
+    border-radius: 30px !important;
+    border: 3px solid var(--accent)
+}
+
+#instructionsUpdate div {
+    color: #FFF !important
+}
+
+#instructionsUpdate a {
+    color: var(--accent) !important;
+}
+
+#windowHolder, #instruc /* i know this is incomplete but it works*/ {
+    background-color: rgb(0 0 0 / 40%)!important;
+}
+
+#windowHolder {
+    content: " ";
+    background-color: transparent !important;
+    position: fixed;
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 99999999999999999999999999999999999!Important;
+    transition-duration: 0.5s;
+}
+
+#windowHolder[style*="block"] {
+    position: fixed;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    z-index: 99999999999999999999999999999999999!Important;
+    transition-duration: 0.5s;
+}
+
+.settNameIn .material-icons{
+    color: var(--accent) !important
+}
+
+.settNameIn {
+    background-color: transparent;
+    border: none;
+    color: #fff !important
+}
+
+.settNameIn:hover {
+    color: var(--accent) !important;
+    background-color: transparent !important;
+    transform: scale(1) !important
+}
+
+.settNameIn:hover> .serverPCount,
+.settNameIn:hover> .serverRegion {
+    color: var(--accent) !important;
+}
+
+.reportBut {
+    color: var(--accent)
+}
+
+#menuPingIcon {
+    color: var(--accent) !important
+}
+
+#menuFPSDisplay,
+#menuPingText::after {
+    color: var(--accent) !important
+}
+
+#menuPingText {
+    color: #fff 
+}
+
+#policeButton,
+#customizeButton {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	color: var(--accent)
+}
+
+.menuClassPlayerClan {
+	 background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+    animation: gradient-border 1.7s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
+.menuClassLevelBox {
+	background-color: rgb(0 0 0 / 30%);
+}
+
+.menuClassPlayerPremium {
+	color: var(--accent)
+}
+
+#policeButton:hover{
+	background-color: transparent;
+	border-bottom: 7px solid var(--accent)
+}
+
+#policeButton {
+    z-index: 10000000000
+}
+
+#customizeButton .material-icons {
+	display: none
+}
+
+.setHed,
+.setHedS {
+	background-color: transparent;
+	border: none;
+	border-bottom: 5px solid var(--accent);
+	border-top: 5px solid var(--accent)
+}
+
+.setHed:hover {
+	background-color: transparent
+}
+
+.lnkTw,
+.updDisN,
+.subPassChg {
+    background-color: transparent;
+    color: var(--accent) !important
+}
+
+.creatorCodeBtn,
+.redVouchBtn {
+    background-color: transparent !important;
+    color: var(--accent) !important
+}
+
+.creatorCodeBtn:hover,
+.redVouchBtn:hover {
+    background-color: transparent !important;
+    color: var(--accent) !important
+}
+
+#spinItems {
+    display: none
+}
+
+#spinInfo,
+#spinKR {
+    background-color: #000;
+    border: 3px solid var(--accent);
+}
+
+#spinCost {
+    display: none
+}
+
+
+#spinRespin {
+	background-color: transparent !important;
+	text-shadow: none !important;
+	box-shadow: none !important
+}
+
+#spinRespin:hover> .material-icons {
+	color: var(--accent) !important
+}
+
+#spinRespin:hover {
+	border-bottom: 7px solid var(--accent);
+	transform: scale(1)
+}
+
+#spinRespin .material-icons {
+	color: #fff 
+}
+
+#menuClassSubtext {
+	visibility: hidden;
+	opacity: 0
+}
+
+#spinHeader{
+    color: var(--accent)
+}
+
+#spinItemName div {
+display: none
+}
+
+#spinInfo div,
+#spinKR span {
+    color: var(--accent) !important;
+}
+
+#spinRespinInfo {
+	background-color: transparent !important;
+	box-shadow: none !important; 
+	color: var(--accent)
+}
+
+#spinRespinInfo {
+	border-bottom: 7px solid var(--accent);
+}
+
+#spinRespinInfo:hover {
+	transform: scale(1)
+}
+
+.updDisN:hover,
+.subPassChg:hover {
+    background-color: transparent;
+    color: var(--accent) !important;
+    transform: scale(1)
+}
+
+.shopCard{
+   transition: font-size 0.25s ease; 
+   text-align: start; 
+   font-size: 0px;
+   border-radius: 9px;
+   transform: scale(1);
+   filter: grayscale()
+}
+
+.shopCard:hover{
+    font-size: 22px;
+    filter: none
+}
+
+.shopCard:hover .spinVal{
+    font-size: 18px;
+}
+
+.shopSale {
+    display: none
+}
+
+.spinVal{
+    text-align: start;
+    font-size: 0px;
+    background: transparent;
+    position: absolute;
+    bottom: -80px;
+    text-indent: 5px;
+    transition-duration: 0.2s;
+}
+
+.chalProg {
+    background-color: transparent
+}
+
+.chalXPBarC {
+    background-color: var(--accent) !important
+}
+
+.setBodH .floatR {
+    color: var(--accent) !important
+}
+
+.settName,
+.settName span {
+    color: #fff !important;
+    border: none
+}
+
+.xpBarV {
+	background-color: transparent;
+}
+
+.xpBarB {
+	background-color: var(--accent);
+	border-radius: 30px
+}
+
+#profilePicM {
+	border: 3px solid var(--accent)
+}
+
+.setBodH span {
+    color: #fff
+}
+
+.chalCard {
+    background-color: transparent;
+    border: 3px solid var(--accent)
+}
+
+.compClassPItm,
+.compMenBtnS,
+.compPLstIcn,
+.compSwpTmB {
+	border: 4px solid var(--accent) !important;
+	background-color: transparent !important;
+}
+
+.compMenBtnS .material-icons {
+	color: var(--accent) !important
+}
+
+#compInfBox,
+#compTimBox,
+.compPLstSt,
+.compPLstCl {
+	color: var(--accent)
+}
+
+#cmpPartnerImg,
+#cmpDatBox {
+	display: none
+}
+
+#compInfBox {
+	visibility: hidden
+}
+
+#compInfBox::after {
+	visibility: visible;
+	content: 'Good Luck with Comp!';
+	position: fixed;
+    right: 39.5%;
+    bottom: 80%
+}
+
+.menuClassLevelBox {
+	background-color: transparent;
+}
+
+.compPlWpIcn {
+background-color: transparent !important;
+border: 3px solid var(--accent)
+}
+
+.cmpFlagIcL  {
+	display: none
+}
+
+.compPLstStR {
+	color: #fff !important
+}
+
+#roundsDisplay,
+#roundSub {
+	background-color: transparent !important;
+	color: var(--accent)
+}
+
+#compClassPHolder,
+#compBtnLst {
+	background-color: transparent
+}
+
+#selectorContainer, .selectorItem {
+  background-color: transparent!important;
+  filter: drop-shadow(0 0 0.15rem var(--accent));
+border: none 
+}
+
+#menuWindow {
+    background-color: #000 !important;
+    border-radius: 20px !important;;
+    border: 3px solid var(--accent) !important;
+}
+
+.mailFrom {
+    color: var(--accent) !important;
+    border-bottom: 3px solid var(--accent)
+}
+
+.mailText {
+	color: var(--accent) !important
+}
+
+.mailObj .material-icons {
+    color: var(--accent) !important;
+}
+
+#mailIcon:hover {
+	color: var(--accent) !important;
+	transform: scale(1)
+}
+
+.endCard th {
+	color: var(--accent) !important
+}
+
+.changeText {
+    color: #fff !important
+}
+
+.bigMenTabA {
+    border-bottom: 4px solid var(--accent)
+}
+
+.bigMenTab:hover,
+.settingTab:hover {
+    border-bottom: 5px solid var(--accent)
+}
+
+.dark .tabANew {
+  border-bottom: 5px solid var(--accent) !important;
+}
+
+.dark .tabANew:hover {
+  border-bottom: 5px solid var(--accent) !important;
+}
+
+.selectedItem {
+	border: none !important;
+}
+
+#menuClassSubtext {
+    position: relative;
+    bottom: -50px
+}
+
+#endTable span {
+    color: var(--accent) !important;
+}
+
+#popupBack {
+display: none
+}
+
+#polConfPop {
+	background-color: #000;
+	border: 3px solid var(--accent);
+}
+
+#polConfPop div {
+	color: #fff !important
+}
+
+#polConfPop b {
+	color: var(--accent) !important
+}
+
+#confirmBtn, #declineBtn {
+	background-color: var(--accent) !important
+}
+
+#confirmBtn:hover, #declineBtn:hover {
+	background-color: #fff !important;
+}
+
+#endTable td {
+	color: #fff !important
+}
+
+.headerBar {
+	background-color: transparent
+}
+
+.mFeatSepar,
+#bigMFeatHBtn,
+#bigMFeatPBtn {
+    background-color: transparent;
+    border: 3px solid var(--accent)
+}
+
+#bigMFeatHBtn,
+#bigMFeatPBtn {
+    color: var(--accent) !important
+}
+
+#bigMFeatName {
+    color: var(--accent) !important
+}
+
+#bigMFeatDesc {
+    color: #fff !important
+}
+
+#instructionsUpdate {
+    background-color: rgb(0 0 0 / 60%)
+}
+
+#loadMoreD:hover {
+    background-color: transparent;
+    color: var(--accent) !important
+}
+
+.mapsVotes {
+    display: none
+}
+
+#menuKRCount span,
+#menuKRCount {
+	color: var(--accent) !important
+}
+
+.progressBarInner {
+	background-color: var(--accent);
+}
+
+.setBodH div {
+    color: #fff !important
+}
+
+#classPreviewCanvas,
+#menuClassNameTag,
+#menuClassName {
+    opacity: 0;
+    transition: all 0.5s
+}
+
+#menuClassContainer:hover> #classPreviewCanvas, 
+#menuClassContainer:hover> #menuClassName, 
+#menuClassContainer:hover> #menuClassNameTag {
+    opacity: 1;
+    transition: all 0.5s
+}
+
+#customizeButton {
+	transform: scale(5);
+	height: 130px;
+	width: 130px;
+	font-size: 5px;
+	position: relative;
+	text-shadow: none !important;
+	top: -100px !important;
+	right: -0px;
+	line-height: 100px
+}
+
+#menuClassContainer:hover> #customizeButton {
+	opacity: 0 !important;
+}
+
+#mapInfoHolder {
+    opacity: 0;
+    transition: 0.4s
+}
+
+#mapInfoHolder:hover {
+    opacity: 1;
+    transition: 0.4s
+}
+
+#menuClassName {
+visibility: hidden
+}
+
+.setBodH a {
+    color: var(--accent)
+}
+
+.smlInput {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.smlInput::placeholder {
+    color: var(--accent)
+}
+
+.setHed {
+    color: var(--accent) !important
+}
+
+.lgn {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.lgn .material-icons {
+    display: none
+}
+
+.lgn:hover {
+    border: 3px solid var(--accent);
+    background-color: transparent !important;
+    transform: scale(1);
+    box-shadow: none !important
+}
+
+.accountButton {
+    background-color: transparent;
+    color: #fff !important
+}
+
+.accountButton:hover {
+    border-bottom: 4px solid var(--accent);
+    color: var(--accent) !important
+}
+
+#referralHeader {
+    border-bottom: 3px solid var(--accent) !important;
+    border-top: 3px solid var(--accent) !important
+}
+
+.accountInput {
+	color: var(--accent) !important;
+	background-color: transparent;
+    text-align: center
+}
+
+.accountInput::placeholder {
+	color: #fff 
+}
+
+.reqWLvl, .reqWIcon, .reqWTxt, .plusOrMinus {
+    color: var(--accent) !important
+}
+
+#windowCloser {
+    display: none
+}
+
+.inputGrey2 {
+    background-color: transparent;
+    color: var(--accent)
+}
+
+.inputGrey2 option {
+    background-color: #000 !important;
+    color: var(--accent) !important;
+}
+
+#presetSelect {
+    background-color: transparent !important;
+    color: var(--accent)
+}
+
+#presetSelect option {
+    background-color: #000 !important;
+    color: var(--accent)
+}
+
+.hostPresetBtn {
+    color: var(--accent) !important;
+    background-color: transparent
+}
+
+.advancedToggle {
+	color: #fff !important
+}
+
+.hostPresetBtn:hover {
+    color: var(--accent) !important
+}
+
+.settNameSmall b {
+    color: var(--accent) !important
+}
+
+#settSearch,
+#itemSearch {
+    background-color: transparent;
+    color: var(--accent) !important;
+    border: none !important;
+    text-align: center
+}
+
+#serverSearch {
+    background-color: transparent;
+    color: var(--accent) !important;
+    border: none !important;
+}
+
+#settSearch::placeholder,
+#itemSearch::placeholder,
+#serverSearch::placeholder {
+    color: var(--accent)
+}
+
+#hostMenuBtn,
+#hostMenuBtn div,
+.hostToggle {
+	background-color: transparent !important;
+	color: var(--accent) !important
+}
+
+.optCheck {
+    background-color: #000;
+    box-shadow: none !important;
+    border: 3px solid #00 !important;
+    text-shadow: none !important;
+    padding: none !important;
+    border-radius: 30px
+}
+
+.advancedToggle {
+	background-color: transparent !important
+}
+
+.advancedToggle:hover {
+	color: var(--accent) !important
+}
+
+.optCheck:hover {
+	background-color: #FFF !important
+}
+
+.optImg {
+	border-radius: 10px
+}
+
+input:checked + .optCheck {
+	background-color: var(--accent);
+}
+
+.hostOpt {
+	background-color: transparent
+}
+
+.optCheck
+
+#itemSearchH {
+	border-bottom: 3px solid var(--accent);
+	background-color: transparent;
+}
+
+.sliderM {
+	background-color: #000
+}
+
+.formInput {
+	background-color: transparent !important;
+	color: var(--accent)
+}
+
+.formInput::placeholder {
+	color: var(--accent) 
+}
+
+.loadoutBtn {
+	background-color: transparent;
+	color: #FFF !important;
+}
+
+.loadoutBtn:hover {
+	color: var(--accent) !important
+}
+
+#loadoutSelect {
+	background-color: transparent !important;
+	color: var(--accent) !important;
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+	padding: none
+}    
+
+
+#loadoutSelect option {
+	background-color: #000;
+	color: var(--accent) !important
+}
+
+.sliderM::-webkit-slider-thumb {
+	background-color: var(--accent) !important;
+    border-radius: 10px
+}
+
+.premiumSkinCol {
+	color: var(--accent) !important
+}
+
+input.sliderVal,
+span.sliderVal {
+border: 3px solid var(--accent) !important;
+border-radius: 10px;
+color: var(--accent) !important;
+}
+
+.sliderVal {
+	color: var(--accent) !important;
+}
+
+#pingText {
+    color:#fff;
+}
+#pingText:before {
+    content:'';
+    color:var(--accent1);
+}
+#pingText:after {
+    content:'  ms';
+    color: #fff;
+    position: fixed;
+    left: 43px
+}
+
+#pingIcon {
+    display:none;
+}
+
+input:checked + .slider:after, input:checked + .slider2:after {
+    visibility: visible;
+    font-family: 'Material-Icons';
+    content: 'check_box';
+    font-size: 40px;
+    position: relative;
+    transtion: 0.3s;
+    left: -7px;
+    color: #000;
+    background-color: var(--accent)
+}
+.slider, .slider2 {
+    width: 28px !important;
+    height: 28px !important;
+    left: 16px;
+    border-radius: 12px;
+    transition: .2s!important;
+}
+.slider, .slider2 {
+    visibility: hidden;
+}
+.slider:before, .slider2:before {
+    display: none!important;
+}
+.slider::after, .slider2::after {
+    visibility: visible;
+    font-family: 'Material-Icons';
+    content: 'indeterminate_check_box';
+    font-size: 40px;
+    position: relative;
+    transition: 0.3s;
+    left: -7px;
+    color:#000;
+    background-color: var(--accent-hover)
+}
+
+#spectButton {
+    z-index: 100000000000 !important
+}
+
+#mLevelCont {
+    background-color: transparent !important;
+}
+
+#profilePicM {
+    border-radius: 1px solid var(--accent) !important;
+    filter: grayscale(0)
+}
+
+.sliderVal {
+	background-color: transparent !important
+}
+
+.settingsHeader {
+	position: relative
+}
+
+#popupContent .material-icons {
+	color: var(--accent) !important
+}
+
+#popupContent div {
+	color: #fff !important
+}
+
+#popupContent {
+	border-radius: 10px solid !important;
+	border: 3px solid var(--accent)
+}
+
+#endCard {
+	background-color: #000;
+	border-radius: 30px;
+	border: 3px solid var(--accent)
+}
+
+.sliderSml {
+	background-color: transparent !important
+}
+
+input:checked + .sliderSml::before {
+	background-color: var(--accent-hover);
+	transform: scale(1.3);
+}
+
+.sliderSml::before {
+	background-color: var(--accent);
+	transform: scale(1.3);
+}
+
+.sliderSml {
+	width: 1px !important
+}
+
+.contCanSelect {
+    background-color: transparent;
+    border: none
+}
+
+.custItNm {
+    display: none
+}
+
+.contCanSelect:hover {
+    border-bottom: 4px solid var(--accent);
+    transform: scale(1) 
+}
+
+.pListName {
+	color: #fff;
+}
+
+.skinRandom.blackShad {
+	pointer-events: none;
+}
+
+.skinCard.blackShad {
+	text-shadow: none;
+}
+
+.serverHostOp {
+	filter: grayscale()
+}
+
+.serverHostOp:hover {
+	filter: grayscale(0);
+	opacity: 1;
+	transform: scale(1.1)
+}
+
+.selRandom.blackShad {
+	color: #fff !important
+}
+
+.dropCard.blackShad {
+    border-radius: 20px;
+}
+
+.hostHeader {
+    border-bottom: 3px solid var(--accent)
+}
+
+.setBodH div {
+    border: none !important
+}
+
+.mapListThumb, .hostMapImg {
+	filter: grayscale()
+}
+
+.mapListThumb:hover, .hostMapImg:hover {
+	filter: grayscale(0)
+}
+
+.hostMapImg:hover {
+	transition: 0.3s !important;
+	transform: scale(2)
+}
+
+.hostMap:hover {
+	transform: scale(1.05);
+	border: 2px solid var(--accent)
+}
+
+#hostActionH div {
+color: #fff !important
+}
+
+#hCustCost {
+    color: var(--accent) !important
+}
+
+#hostActionH {
+    border-top: 3px solid var(--accent)
+}
+
+.hostMap {
+border: none}
+
+.noBtnCard.blackShad {
+	background-color: transparent;
+	border: 3px solid var(--accent) !important
+}
+
+.skinCard:hover img {
+	filter: grayscale(0);
+}
+
+.hostCBtn {
+    background-color: transparent;
+    border: none;
+    color: var(--accent) !important
+}
+
+.hostCBtn:hover {
+    color: var(--accent) !important
+}
+
+.skinCard:hover,
+.noBtnCard:hover {
+    filter: none;
+    transition: 0.3s
+}
+
+.skinImg {
+	position: relative;
+	top: 2=5px;
+	filter: grayscale(1) brightness(1);
+}
+
+.skinCard:hover {
+	color: #fff !important;
+	height: 140px;
+	transform: translateY(10px);
+}
+
+.limitedSplit .skinCard {
+	background-color: #000;
+}
+
+.skinCard,
+.noBtnCard {
+	border-radius: 8px;
+	border-width: 0 !important;
+	background-color: rgba(15, 15, 15, 0.15);
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 160px;
+	transition: all 0.3s cubic-bezier(.44, .31, .66, .78);
+	filter: grayscale(1)
+}
+
+.endTableN span {
+    background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+    animation: gradient-border 1.7s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
+.pListName span {
+	    background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+    animation: gradient-border 1.7s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
+#specTimer {
+	background-color: #000;
+	border: 3px solid var(--accent);
+	border-radius: 10px
+}
+
+#specGameInfo {
+	color: var(--accent) !important;
+	text-shadow: none
+}
+
+#streakVal,
+#killsVal,
+#deathsVal {
+	color: var(--accent) !important
+}
+
+.endCard {
+	background-color: #000;
+	border-radius: 30px;
+	border: 3px solid var(--accent)
+}
+
+#itemViewPop {
+	background-color: rgb(0 0 0 / 2%);
+	border-radius: 20px;
+}
+
+#itemInfoBtn {
+	background-color: transparent;
+	color: #fFF
+}
+
+.itemViewSea,
+#itemViewPop #itemSpinName {
+	background-color: transparent !important;
+}
+
+#itemInfoBtn:hover {
+	background-color: transparent;
+	color: var(--accent)
+}
+
+.itemCnt {
+	filter: grayscale(0) !important
+}
+
+
+#txtBubble,
+#policePopC {
+	color: var(--accent) !important;
+	background-color: #000;
+	border: 3px solid var(--accent)
+}
+
+#policePopC div,
+#policePopC b {
+    color: #fff !important
+}
+
+#trustPrgHD {
+    background-color: var(--accent) !important;
+}
+
+.polApplc {
+    background-color: transparent;
+    border: none;
+    color: var(--accent);
+    text-align: center
+}
+
+.polApplc::placeholder {
+    color: var(--accent)
+}
+
+#activateKDM {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transform: scale(1) !important;
+    color: var(--accent)
+}
+
+#activateKDM:hover {
+        color: var(--accent) !important
+}
+
+#specStats {
+    position: fixed;
+    left: 1600px
+}
+
+.lockedCard:hover> .material-icons {
+    color: var(--accent) !important
+}
+
+.itemOwn {
+    visibility: hidden
+}
+
+.chalXPBarC,
+#menuLevelBar {
+    border-radius: 30px
+}
+
+.searchBtn .material-icons,
+.searchBtn{
+    color: var(--accent) !important;
+    background-color: transparent !important
+}
+
+[style="color:rgba(255,255,255,0.4);font-size:19px;margin-top:10px;width:100%;text-align:center;"] {
+    color: var(--accent) !important
+}
+
+.settName .material-icons {
+	color: var(--accent) !important
+}
+
+.setHedBind {
+	border-bottom: 3px solid var(--accent);
+		border-top: 3px solid var(--accent)
+
+}
+
+.inputGrey2 {
+	color: var(--accent) !important;
+}
+
+.inputGrey2::placeholder {
+	color: var(--accent)
+}
+
+#bidTextColBB,
+#bidBgColBB,
+#slid_hitColor,
+#slid_dmgColor,
+#slid_critColor,
+#slid_speedColor,
+#slid_speedColorMax,
+#slid_healthColT,
+#slid_healthColE,
+#slid_xpBarCol,
+#slid_hitmCol,
+#slid_hitmKCol,
+#slid_hudHealthHigh,
+#slid_hudHealthLow,
+#slid_spdLinesCol,
+#slid_scoreColor,
+#slid_progColor,
+#slid_progMColor,
+#slid_bulletTracerCol,
+#slid_trailCol,
+#slid_ropeCol,
+#slid_scopeBorderCol,
+.skinColorItem {
+	height: 35px;
+	width: 35px;
+	border: 4px solid var(--accent) !important;
+	position: relative;
+	left: -14px
+}
+
+.tScoreM {
+	color: #fff !important;
+}
+
+#teamScores {
+	background-color: #000;
+	border: 3px solid var(--accent);
+	border-radius: 10px
+}
+
+.teamWin1 {
+	display: none !important;
+}
+
+.tScoreT {
+	color: #fff !important;
+}
+
+.tScoreC.you {
+	background-color: #fff;
+	border: none
+}
+
+.tScoreC {
+	background-color: var(--accent);
+	border: none
+}
+
+.teamTotalScore,
+.teamTotalN1 {
+	color: var(--accent)
+}
+
+#shareTxt {
+	background-color: transparent;
+	border: 1px solid var(--accent);
+	color: var(--accent);
+	text-align: center
+}
+
+#shareTxt::placeholder {
+	color: var(--accent);
+	text-align: center
+}
+
+.flag-icon-us {
+	display: none !important;
+}
+
+#voteKickKeys {
+	color: var(--accent) !important;
+}
+
+#kickVoteY,
+#KickVoteN {
+	color: var(--accent) !important;
+}
+
+#networkLagHed {
+	color: var(--accent) !important;
+}
+
+#networkLagHed div {
+	color: #fff !important;
+}
+
+.voteKickInfo {
+	color: #fff !important;
+}
+
+#networkLag div {
+    color: #fff !important;
+}
+
+#esportsServerTable div {
+	color: var(--accent) !important;
+}
+
+#voteToKick,
+#networkLag {
+	background-color: #000;
+	border: 3px solid var(--accent);
+	border-radius: 10px;
+}
+
+.voteKickInfo,
+.voteKickNum {
+	color: #fff !important;
+}
+
+.VoteKickName,
+.voteKickKeys,
+.voteKickKeys span {
+	color: var(--accent);
+}
+
+.classCard {
+    color: white !important;
+    background: rgba(0,0,0,0.5);
+    font-size:0;
+    border: none !important;
+}
+.classWeap {
+    font-size:0;
+    color: white !important;
+    text-shadow:-1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020, -3px -3px 0 #202020, 3px -3px 0 #202020, -3px 3px 0 #202020, 3px 3px 0 #202020;
+}
+.classHP,.classHP span,.classLvl {
+    color:white !important;
+    font-size: 0 !important;
+    transition-duration:0.3s;
+}
+.classXPBar {
+    opacity:0;
+    transition-duration:0.3s;
+}
+.classCard,.classWeap {
+    font-size:0px;
+    transition-duration:0.3s;
+}
+.classImgC {
+    position:absolute;
+    right:30px;
+    top:50px;
+    filter:saturate(0);
+    transition-duration:0.3s;
+}
+.classCard:hover .classWeap,.classCard:hover .classHP,.classCard:hover .classLvl {
+    font-size:20px !important;
+}
+.classCard:hover {
+    background-color:#000000a6;
+    font-size:20px;
+}
+.classCard:hover .classImgC {
+    transform:scale(1);
+    filter:saturate(1);
+}
+.classCard:hover .classXPBar {
+    opacity:1;
+}
+
+.classXPBar,
+.clsXPBarC {
+    border-radius: 30px;
+}
+
+.clsXPBarC {
+        background-color: var(--accent)
+
+}
+
+.rnkShpBtn {
+	background-color: var(--accent) !Important
+}
+
+.rnkShpINm {
+	color: var(--accent) !important
+}
+
+#esportsServerTable div {
+	color: var(--accent) !important
+}
+
+[style="font-size:22px;margin-bottom:20px;margin-top:10px;color:rgba(255,255,255,0.6);width:100%;text-align:center"] {
+	color: #fff !important
+}
+
+.classHP,
+.classWeap {
+    display: none
+}
+
+.esprtsNewsI {
+	color: #fff !important;
+	border-bottom: 3px solid var(--accent)
+}
+
+#bigMFeatHBtnD {
+	background-color: transparent;
+	color: var(--accent) !important;
+	border: 3px solid var(--accent)
+}
+
+#rawMapData,
+#passCode {
+    color: var(--accent) !important;
+    background-color: transparent !important;
+}
+
+#rawMapData::placeholder,
+#passCode::placeholder {
+    color: var(--accent) !important
+}
+
+
+.newLeaderTeamScore {
+	color: var(--accent) !important
+}
+
+#kCStat {
+	color: var(--accent) !important
+}
+
+.vote,
+.kdf {
+	background-color: transparent !important;
+	color: var(--accent) !important
+}
+
+.vote:hover,
+.kdf:hover {
+	color: var(--accent) !important;
+    opacity: 1
+}
+
+.pListActions:hover {
+    background-color: transparent;
+    opacity: 1 !important;
+}
+
+.sliderVal {
+	background-color: transparent !important
+}
+
+.hostPresetBtn {
+	background-color: transparent !important
+}
+
+.setToggle {
+	background-color: transparent;
+	color: var(--accent) !important;
+}
+
+.setToggle option {
+	background-color: #000;
+	color: var(--accent)
+}
+
+.xpBarV {
+    border-radius: 30px
+}
+
+.accountButton {
+    background-color: transparent !important
+}
+
+#spectButton span {
+	color: #FFF !important
+}
+
+.prizeWheelTable {
+    background-color: transparent;
+}
+
+.spinVal {
+    background-color: transparent !important
+}
+
+#mailCount {
+    background-color: var(--accent);
+    color: #000
+
+}
+
+div a {
+    color: var(--accent) !important
+}
+
+.lnkTw {
+    background-color: transparent !important
+}
+
+.tScoreF.you,
+.tScore{
+    color: #fff !important
+}
+
+.teamTotals {
+    background-color: #000;
+    border: 3px solid var(--accent);
+    border-radius: 15px
+}
+
+#tScoreM1,
+#tScoreM2 {
+    color: #fff !important
+}
+
+.tScoreF {
+    color: var(--accent)
+}
+
+.teamTotalN1 {
+    color: var(--accent) !important
+}
+
+.teamTotalN0 {
+    color: #fff
+}
+
+.xpRnk {
+	opacity: 0
+}
+
+#menuPingIcon {
+	display: none
+}
