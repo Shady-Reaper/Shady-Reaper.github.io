@@ -24,10 +24,33 @@ please ctrl f whatever you need to find*/
 
 /* change both of the above gradients to whatever you want */
 
-#navTitle::before {
+@font-face {
+    font-family: gamefont;
+    src: url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
+}
+
+#backgroundImage {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    opacity: 0.9;
+    background-image: url(https://cdn.discordapp.com/attachments/815739824812064778/851307631456550922/Social.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lds-ring:before {
     visibility: visible;
-    content: 'Shady';
-    font-size: 35px;
+    content: url(https://cdn.discordapp.com/attachments/828318539991089162/829667049114173440/Infinity-1s-200px_2.gif);
+    position: fixed;
+    left: 6px;
+    bottom: -5px;
+    right: 18px;
+    top: -43px;
+    transform: scale(0.6);
 }
 
 * {
@@ -41,6 +64,16 @@ please ctrl f whatever you need to find*/
 	user-select: none;
 	cursor: url('https://cdn.discordapp.com/attachments/815739824812064778/851308974950187059/cursor_1_5.png'), auto !important;
 }
+
+/* do not change anything except the cursor url because * is the entire code for Krunker Social */
+
+#navTitle::before {
+    visibility: visible;
+    content: 'Shady';
+    font-size: 35px;
+}
+
+/* change all the above stuff to whatever fits your wants for the color scheme */
 
 [style$="color:#292929"] {
 	color: rgba(0,0,0,1) !important;
@@ -342,17 +375,7 @@ span.lName {
 	background: transparent !important;
 }
 
-* {
-	outline: none;
-	color: #ffffff;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	cursor: url('https://cdn.discordapp.com/attachments/815739824812064778/851308974950187059/cursor_1_5.png'), auto !important;
-}
+
 
 #sellPrceFee {
 	color: #fff !important
@@ -936,24 +959,6 @@ input[type=color] {
 	display:none !important
 }
 
-@font-face {
-    font-family: gamefont;
-    src: url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
-}
-
-#backgroundImage {
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    opacity: 0.9;
-    background-image: url(https://cdn.discordapp.com/attachments/815739824812064778/851307631456550922/Social.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 input#marketFiltTxt {
     color: #000 !important;
 }
@@ -1383,18 +1388,6 @@ span.material-icons.likeBtn:hover {
     margin-top: 10px;
     font-size: 17px;
     color: #fff!important;
-}
-
-* {
-    outline: none;
-    font-family: gamefont;
-    color: #ffffff;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 #sea-pseudo {
@@ -1833,17 +1826,6 @@ color: var(--accent)
 
 [style="font-size:22px;color:rgba(255,255,255,0.6);margin-right:10px"] {
 	color: rgba(255 255 255) !important
-}
-
-.lds-ring:before {
-    visibility: visible;
-    content: url(https://cdn.discordapp.com/attachments/828318539991089162/829667049114173440/Infinity-1s-200px_2.gif);
-    position: fixed;
-    left: 6px;
-    bottom: -5px;
-    right: 18px;
-    top: -43px;
-    transform: scale(0.6);
 }
 
 .lds-ring div {
