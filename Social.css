@@ -3,11 +3,9 @@
 2. similar to the navTitle, the cursor, and lds-ring (loading) should be changed to whatever you want to change it to (so it matches with your --accent)
 3. i know you guys have probably read this many times, but any code copied from my css (this one haha) must be credited to Shady#0690. 
 4. change the background-image by searching "#backgroundImage"
-5. HAVE FUN PLAYING KRUNKER!!!
-*/
+5. HAVE FUN PLAYING KRUNKER!!! */
 
-/* there is no organization whatsoever, so 
-please ctrl f whatever you need to find*/
+/* there is no organization whatsoever, so please ctrl f whatever you need to find*/
 
 :root {
     --accent: #00FFFF; /* feel free to change */
