@@ -743,7 +743,7 @@ background-color: transparent !important
 @keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
 
 .newLeaderNameM span {
-    background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+    background-image: linear-gradient(to right, var(--accent), var(--accent-hover));   
     animation: gradient-border 1.7s linear infinite;
     background-size: 400% 100%;
     color: transparent !important;
@@ -1078,8 +1078,8 @@ input:checked +.matchVoteThumb {
 }
 
 .menuClassPlayerClan {
-	 background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
-    animation: gradient-border 1.7s linear infinite;
+	 background-image: linear-gradient(to right, var(--accent), var(--accent-hover));
+        animation: gradient-border 1.7s linear infinite;
     background-size: 400% 100%;
     color: transparent !important;
     -webkit-background-clip: text;
@@ -2092,16 +2092,16 @@ border: none}
 }
 
 .endTableN span {
-    background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
-    animation: gradient-border 1.7s linear infinite;
+	 background-image: linear-gradient(to right, var(--accent), var(--accent-hover));
+	     animation: gradient-border 1.7s linear infinite;
     background-size: 400% 100%;
     color: transparent !important;
     -webkit-background-clip: text;
 }
 
 .pListName span {
-	    background-image: linear-gradient(to right, var(--accent), #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
-    animation: gradient-border 1.7s linear infinite;
+	 background-image: linear-gradient(to right, var(--accent), var(--accent-hover));    
+	 animation: gradient-border 1.7s linear infinite;
     background-size: 400% 100%;
     color: transparent !important;
     -webkit-background-clip: text;
@@ -2837,4 +2837,29 @@ background-color: transparent
 
 [style="color:#fff;font-size:35px"] {
 	color: var(--accent) !important
+}
+
+.leaderName { 
+	color: var(--accent)
+}
+
+.leaderNameM span {
+    background-image: linear-gradient(to right, var(--accent), var(--accent-hover));
+      animation: gradient-border 1.7s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
+.leaderCounter, .leaderScore {
+	color: #fff
+}
+
+#voteKickInfo {
+	color: #fff !important;
+}
+
+#leaderDisplay {
+	background-color: rgb(0 0 0 / 20%) !important;
+	border: 3px solid var(--accent)
 }
