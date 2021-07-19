@@ -2861,5 +2861,6 @@ background-color: transparent
 
 #leaderDisplay {
 	background-color: rgb(0 0 0 / 20%) !important;
-	border: 3px solid var(--accent)
+	border: 3px solid var(--accent);
+	border-radius: 30px
 }
