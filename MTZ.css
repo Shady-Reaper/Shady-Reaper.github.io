@@ -451,10 +451,6 @@ td .material-icons {
 	color: var(--accent) !important
 }
 
-div span {
-	color: #FFF !important
-}
-
 .settingsHeader {
 	background-color: transparent !important
 }
@@ -954,11 +950,16 @@ input:checked +.matchVoteThumb {
 
 .button.small {
 	background-color: transparent !important;
-	box-shadow: none !important
+	box-shadow: none !important;
+	border: none !important
 }
 
 .button.small:hover {
     background-color: var(--accent) !important;
+}
+
+input:checked + .button.small {
+	background-color: var(--accent) !important
 }
 
 #specGMessage,
@@ -1074,7 +1075,8 @@ input:checked +.matchVoteThumb {
 #customizeButton {
 	background-color: transparent !important;
 	box-shadow: none !important;
-	color: var(--accent)
+	color: var(--accent) !important;
+	border: none !important
 }
 
 .menuClassPlayerClan {
@@ -1095,7 +1097,7 @@ input:checked +.matchVoteThumb {
 
 #policeButton:hover{
 	background-color: transparent;
-	border-bottom: 7px solid var(--accent)
+	border-bottom: 7px solid var(--accent) !important
 }
 
 #policeButton {
@@ -1104,6 +1106,23 @@ input:checked +.matchVoteThumb {
 
 #customizeButton .material-icons {
 	display: none
+}
+
+.setSugBox, .setSugBox:hover {
+	border: 3px solid var(--accent);
+	opacity: 1;
+	transform: scale(1);
+	border-radius: 20px
+}
+
+.setSugInf {
+	color: #00FFFF !important;
+	text-align: center !important;
+	right: -5px
+}
+
+.segSugIH {
+	border-radius: 30px
 }
 
 .setHed,
@@ -1569,16 +1588,20 @@ display: none
 	transform: scale(5);
 	height: 130px;
 	width: 130px;
-	font-size: 5px;
+	font-size: 5px !important;
 	position: relative;
 	text-shadow: none !important;
 	top: -100px !important;
 	right: -0px;
-	line-height: 100px
+	line-height: 100px !important;
+	border: none !important
 }
 
-#menuClassContainer:hover> #customizeButton {
-	opacity: 0 !important;
+
+
+#uiBase.onMenu #spectButton span {
+    color: #fff !important;
+    border-radius: 0;
 }
 
 #mapInfoHolder {
@@ -1622,20 +1645,38 @@ visibility: hidden
 }
 
 .lgn:hover {
-    border: 3px solid var(--accent);
+    border: 3px solid var(--accent) !important;
     background-color: transparent !important;
     transform: scale(1);
     box-shadow: none !important
 }
 
-.accountButton {
-    background-color: transparent;
-    color: #fff !important
+[style="font-size:19px;color:rgba(255,255,255,0.4);margin-top:5px;margin-bottom:10px;"] {
+	color: #fff !important
 }
 
-.accountButton:hover {
-    border-bottom: 4px solid var(--accent);
-    color: var(--accent) !important
+.lgn {
+	border: none !important
+}
+
+.accBtn {
+    background-color: transparent !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important
+}
+
+.accBtn:hover {
+    border-bottom: 4px solid var(--accent) !important;
+    color: var(--accent) !important;
+    border: none !important;
+    background-color: transparent !important
+}
+
+.accBtn:hover {
+	    border-bottom: 4px solid var(--accent) !important;
+	    transform: scale()
 }
 
 #referralHeader {
@@ -2055,6 +2096,10 @@ border: none}
 
 .hostCBtn:hover {
     color: var(--accent) !important
+}
+
+[style="color:#2196F3"] {
+	color: var(--accent) !important
 }
 
 .skinCard:hover,
@@ -2788,6 +2833,10 @@ div.verticalSeparator {
 	transition: 0.4s
 }
 
+.altMngr {
+    line-height: -50px !important
+}
+
 .smlInput, #mpCat option, #mpCat {
     color: var(--accent) !important;
     background-color: #000 !important
@@ -2862,5 +2911,75 @@ background-color: transparent
 #leaderDisplay {
 	background-color: rgb(0 0 0 / 20%) !important;
 	border: 3px solid var(--accent);
-	border-radius: 10px
+	border-radius: 30px
+}
+
+#menuBtnJoin, #menuBtnInvite, #menuBtnRanked, #menuBtnBrowser, #menuBtnHost, #menuBtnExit {
+	background-color: transparent !important;
+	color: #fff !important;
+	box-shadow: none !important
+}
+
+#menuBtnJoin:hover, #menuBtnInvite:hover, #menuBtnRanked:hover, #menuBtnBrowser:hover, #menuBtnHost:hover, #menuBtnExit:hover {
+	background-color: transparent !important;
+	border-bottom: 6px solid var(--accent) !important;
+	color: #fff !important;
+	box-shadow: none !important;
+}
+
+.chatItem[style] {
+	color: var(--accent) !important;
+}
+
+.chatMsg {
+	color: #fff
+}
+
+.chatMsg div {
+	color: var(--accent) !important;
+}
+
+.chatMsg[style="color:#fc03ec"] {
+	color: var(--accent-hover) !important;
+}
+
+#updateAd, #updateAd #helpTxtHol {
+    display: inline-block;
+}
+
+#updateAdVersion {
+    color: var(--accent)
+}
+
+#updateAdIcon {
+    background-color: var(--accent);
+}
+
+#updateAd {
+    background-color: #000;
+    border: 3px solid var(--accent)
+}
+
+[style="color:rgba(255,255,255,0.5);float:right"] {
+	color: #fff !important
+}
+
+#updateAdVersion, #updateAd #helpTxtHol {
+	opacity: 1 !important
+}
+
+[style="color:rgba(255,255,255,0.6);"] {
+	color: var(--accent) !important
+}
+
+.viewAllUpdates, .logVersionHed {
+	color: var(--accent) !important;
+	background-color: transparent;
+	border: 3px solid !important
+}
+
+.viewAllUpdates:hover {
+	transform: scale(1);
+	border: none;
+	color: var(--accent-hover) !important
 }
