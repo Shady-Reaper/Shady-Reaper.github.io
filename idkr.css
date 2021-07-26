@@ -4,7 +4,7 @@
 /* @author             Shady#0690                                      */
 /* @version            ver: 1.0                                        */
 /* @notes              FULL SCREEN DESIGNED, 0.7 UI - Have Fun (also thanks Nxxh for this cool outline!)*/
-/* @discord            discord.gg/                                     */
+/* @discord            discord.gg/QqGPs4Wq89                                     */
 /* =================================================================== */
 
 
@@ -13,7 +13,7 @@
 /* the profile header is in the top left corner, I hid it so its cleaner :) */
 
 :root {
-    --accent: #700cf2;
+    --accent: #00ffff;
     --background: #000;
     --accent-hover: #ff00ff;
     --ammo-gradient-end: #0000FF
@@ -94,12 +94,13 @@ a {
 }
 #instructions:after {
   visibility: visible;
-  content: 'GOOD LUCK';
+  content: 'GOOD LUCK';
   color: var(--accent);
   transform:translateX(-50%);
   position:fixed;
   left:50%;
 }
+
 #uiBase.onMenu #spectButton {
 	transform: scale(1.5);
 	position: fixed;
@@ -144,6 +145,7 @@ a {
 .buttonG {
     background-color: transparent !important;
     box-shadow: none !important;
+    border: none !important
 }
 
 #instructionsUpdate div, #instructionsUpdate span{
@@ -159,29 +161,12 @@ a {
 .buttonR:hover,
 .buttonP:hover,
 .buttonG:hover {
-    color: var(--accent);
-    box-shadow: 3px solid #fff;
+    color: var(--accent) !important;
+    box-shadow: 3px solid #fff !important;
     background-color: transparent !important;
     transform: scale(1);
-    filter: brightness(1.15)
-}
-
-#policeButton {
-	display: block!important;
-    position: absolute;
-    margin-top: -135px;
-    margin-left: -120px;
-    transform:scale(0.8);
-    box-shadow: none !important;
-    background-color: transparent!important;
-    filter:hue-rotate(183.5deg);
-}
-
-#policeButton:hover {
-    transition: 0.3s!important;
-    transform: scale(0.9)!important;
-    box-shadow: none!important;
-    filter: brightness(1.1) sepia(1)saturate(1000) grayscale(0) hue-rotate(100deg)
+    filter: brightness(1.15);
+    border: none !important
 }
 
 #mainLogo {
@@ -199,50 +184,52 @@ a {
     visibility: hidden
 }
 
-.terms:hover {
-	color: var(--accent);
-	transition: 0.4s
-}
-
 .headerBarRight,
 #termsInfo {
     background-color: transparent !important;
-}
-
-#termsInfo {
-    height: 38px
-}
-
-#termsInfo::before {
-            content: '';
-            position: absolute;
-            top: 15.5%;
-            left: -10px;
-            width: 0;
-            height: 0;
-      border-top: 20px solid #00000000;
-      border-left: 25px solid #00000000;
-      border-bottom: 20px solid transparent;
-            transform: rotate(180deg);
-}
-
-#termsInfo::before {
-	transform: scale(5)
-}
-
-.terms {
-    position: relative;
-    top: -16px
-}
-
-.terms {
-    color: #fff
 }
 
 #menuPingText,
 #menuFPSDisplay,
 #menuRegionLabel {
     color: #fff
+}
+
+#termsInfo {
+	background-color: transparent;
+}
+
+.terms {
+	text-decoration: none !important;
+}
+
+.terms:hover {
+	transform: scale(0.9);
+}
+
+.verticalSeparatorInline {
+	display: none;
+}
+
+.terms {
+	font-size: 0;
+	transition-duration: 0.25s;
+}
+
+.terms:last-child {
+	font-size: 20px;
+}
+
+.terms {
+	color: #fff !important
+}
+
+.terms:hover {
+	color: var(--accent) !important
+}
+
+#termsInfo:hover .terms {
+	font-size: 20px;
 }
 
 .matchVoteTotal {
@@ -266,6 +253,14 @@ a {
 	position: fixed;
 	left: px !important;
 	bottom: -10px
+}
+
+[style="color:#9eeb56"] {
+	color: var(--accent) !important
+} 
+
+.chatItem span {
+	color: #fff !important
 }
 
 #txtBubble,
@@ -448,12 +443,30 @@ background-color: transparent !important;
 	content: ' ms ';
 	color: #fff;
 	font-size: 18px;
+	position: relative;
+	left: 4px
 }
 
 .menuDebugInfo {
 	display: block !important;
 	font-size: 18px;
 }
+
+.setSugBox, .setSugBox:hover {
+	border: 3px solid var(--accent) !important;
+	opacity: 1;
+	transform: scale(1);
+	border-radius: 20px !important
+}
+
+.setSugInf {
+	color: #00FFFF !important;
+	text-align: center !important;
+	right: -5px;
+}
+
+#endUi {
+background-color: transparent !important}
 
 .leaderName {
     color: #eb5656;
@@ -481,6 +494,9 @@ background-color: transparent !important;
 	color: #fff
 }
 
+#mailIcon {
+	opacity: 1 !important
+}
 
 .newLeaderScore {
 	color: #fff !important;
@@ -495,7 +511,6 @@ background-color: transparent !important;
 }
 
 
-.leaderName span[style*='color:#FBC02D'],
 .newLeaderName span[style*='color:#FBC02D'],
 .leaderNameM span[style*='color:#FBC02D'],
 .newLeaderNameM span[style*='color:#FBC02D'],
@@ -797,17 +812,6 @@ background-color: transparent !important;
         transition-duration: 0.35s;
 }
 
-#termsInfo {
-	    width: 500px;
-        left: -10% !important;
-        top: %!important;
-        height: %!important;
-        -webkit-transform: translateX(-140px);
-        transform: translateX(520px);
-        -webkit-transition: 0.5s -webkit-transform;
-        transition-duration: 0.35s;
-}
-
 #menuItemContainer:hover {
          -webkit-transform: translateX(-2px);
           transform: translateX(-2px);
@@ -816,12 +820,6 @@ background-color: transparent !important;
 .headerBarLeft:hover {
          -webkit-transform: translateX(220px);
           transform: translateX(220px);
-}
-
-#termsInfo:hover {
-         -webkit-transform: translateX(160px);
-          transform: translateX(160px);
-          transition: 0.3s
 }
 
 #mapInfo {
@@ -834,9 +832,15 @@ background-color: transparent !important;
 	transition: 0.3s
 }
 
-#mapInfoHolder {
-	width: 300px
+#mapInfo {
+    visibility: hidden
 }
+
+#mapInfo::after {
+    visibility: visible;
+    content: "Follow FilaDanner On Twitch"
+}
+
 
 .menuItem {
 	width: 105px !important
@@ -983,7 +987,8 @@ input:checked + .matchVoteThumb {
 }
 
 .mapListThumb, .hostMapImg {
-	filter: grayscale()
+	filter: grayscale();
+	transition: 0.3s
 }
 
 .serverHeader {
@@ -1049,7 +1054,12 @@ input:checked + .matchVoteThumb {
 }
 
 .hostMap:hover {
-	transform: scale(1.05)
+	transform: scale(1.05);
+	transition: 0.3s
+}
+
+.hostMap {
+	transition: 0.3s
 }
 
 .quickJoin {
@@ -1202,7 +1212,7 @@ input:checked + .matchVoteThumb {
 }
 
 .progressBar {
-	background-color: rgb(0 0 0 / 40%) !important;
+	background-color: rgb(0 0 0) !important;
 	border-radius: 30px !important
 }
 
@@ -1638,6 +1648,10 @@ color: #fff
     transition: all 0.4s!Important;
 }
 
+[style="color:rgba(255,255,255,0.4);font-size:19px;margin-top:10px;width:100%;text-align:center;"] {
+	color: #fff !important
+}
+
 #classPreviewCanvas {
     opacity: 0;
     transition: all 400ms!Important;
@@ -1874,12 +1888,18 @@ a {
   position:fixed;
   left:50%;
 }
+
+[style="color:rgba(255,255,255,0.7)"] {
+	color: var(--accent) !important
+}
+
 #uiBase.onMenu #spectButton {
 	transform: scale(1.5);
 	position: fixed;
 	left: 88.5%;
 	bottom: 16%;
-	color: #fff !important
+	color: #fff !important;
+	z-index: 1111111111
 }
 
 #mapInfo {
@@ -1949,13 +1969,16 @@ a {
     box-shadow: none !important;
     background-color: transparent!important;
     filter:hue-rotate(183.5deg);
+    border: none !important;
+    z-index: 1000
 }
 
 #policeButton:hover {
     transition: 0.3s!important;
     transform: scale(0.9)!important;
     box-shadow: none!important;
-    filter: brightness(1.1) sepia(1)saturate(1000) grayscale(0) hue-rotate(100deg)
+    filter: brightness(1.1) sepia(1)saturate(1000) grayscale(0) hue-rotate(100deg);
+    border: none !important
 }
 
 #mainLogo {
@@ -1973,28 +1996,14 @@ a {
     visibility: hidden
 }
 
-.terms:hover {
-	color: var(--accent);
-	transition: 0.4s
-}
 
 .headerBarRight,
 #termsInfo {
     background-color: transparent !important;
 }
 
-#termsInfo {
-    height: 38px
-}
 
-.terms {
-    position: relative;
-    top: -16px
-}
 
-.terms {
-    color: #fff
-}
 
 #menuPingText,
 #menuFPS {
@@ -2158,7 +2167,6 @@ background-color: transparent !important
 }
 
 
-.leaderName span[style*='color:#FBC02D'],
 .newLeaderName span[style*='color:#FBC02D'],
 .leaderNameM span[style*='color:#FBC02D'],
 .newLeaderNameM span[style*='color:#FBC02D'],
@@ -2617,6 +2625,10 @@ background-color: transparent !important
 	transform: scale(2)
 }
 
+.hostMapImg {
+	transition: 0.3s
+}
+
 .hostMap:hover {
 	transform: scale(1.05)
 }
@@ -2794,10 +2806,6 @@ background-color: transparent !important
 	color: var(--accent) !important;
 }
 
-.chatMsg span {
-	color: #fff !important;
-}
-
 .chatMsg span[style="color:#9eeb56"] {
 	color: var(--accent) !important;
 	opacity: 0.75;
@@ -2893,7 +2901,7 @@ background-color: transparent !important
 }
 
 .progressBar {
-	background-color: rgb(0 0 0 / 40%) !important;
+	background-color: rgb(0 0 0) !important;
 	border-radius: 30px !important
 }
 
@@ -3195,7 +3203,15 @@ input:checked +.optCheck {
 	background-color: transparent;
 	opacity: 1;
 		transform: scale(1.1);
-	border-radius: 30px
+	border-radius: 30px;
+	transition: 0.3s;
+	filter: none
+}
+
+.serverHostOp {
+	transition: 0.3s;
+	border-radius: 30px;
+	filter: grayscale(1)
 }
 
 .premiumSkinCol {
@@ -3664,9 +3680,10 @@ input:checked + .sliderM {
 #slid_trailCol,
 #slid_ropeCol,
 #slid_scopeBorderCol,
-.skinColorItem {
-	height: 35px;
-	width: 35px;
+.skinColorItem,
+#slid_progMOColor {
+	height: 35px !important;
+	width: 35px !important;
 	border: 4px solid var(--accent) !important;
 	position: relative;
 	left: -14px
@@ -3777,7 +3794,7 @@ input:checked + .sliderM {
 }
 
 #reloadMsg {
-        webkit-animation: rainbowT .5s linear infinite;
+        webkit-animation: var(--accent), var(--accent-hover) .5s linear infinite;
     animation: rainbowT .5s linear infinite;
     background-color: transparent;
     position: fixed !important;
@@ -3911,7 +3928,7 @@ input:checked + .matchVoteThumb {
 
 .sliderM::-webkit-slider-thumb {
    background: var(--accent);
-   border-radius: 10px 
+   border-radius: 30px !important 
 }
 
 .sliderM {
@@ -4133,7 +4150,7 @@ input:checked + .matchVoteThumb {
     color:var(--accent1);
 }
 #pingText:after {
-    content:'  ms';
+    content:' ms';
     color: #fff;
     position: fixed;
     left: 43px
@@ -4167,6 +4184,18 @@ input:checked + .matchVoteThumb {
 .xpEndBarB {
 	background-color: var(--accent) !important;
 	border-radius: 30px
+}
+
+.mapListCat, .logVersionHed, .viewAllUpdates {
+	color: var(--accent) !important;
+	border: 3px solid var(--accent);
+	background-color: transparent;
+}
+
+.viewAllUpdates:hover {
+	color: var(--accent-hover) !important;
+	border: 3px solid var(--accent-hover);
+	transform: scale(1)
 }
 
 .xpEndBar span {
@@ -4212,6 +4241,10 @@ input:checked + .matchVoteThumb {
 
 .endTitle {
 	display: none
+}
+
+span [style="color:#eb5656"] {
+	color: var(--accent) !important
 }
 
 #pingDisplay {
@@ -4325,7 +4358,7 @@ backdrop-filter:blur(5px);
 @keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
 
 .newLeaderNameM span {
-    background-image: linear-gradient(to right, #00FFFF, #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+	    background-image: linear-gradient(to right, var(--accent), var(--accent), var(--accent-hover));
     animation: gradient-border 1.7s linear infinite;
     background-size: 400% 100%;
     color: transparent !important;
@@ -4399,8 +4432,20 @@ backdrop-filter:blur(5px);
 	color: #fff;
 }
 
+.leaderName {
+	color: var(--accent) !important
+} 
+
+.leaderNameM span {
+	    background-image: linear-gradient(to right, var(--accent), var(--accent), var(--accent-hover));
+    animation: gradient-border 1.7s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+}
+
 .endTableN span {
-    background-image: linear-gradient(to right, #00FFFF, #00DDFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00DDFF);
+	    background-image: linear-gradient(to right, var(--accent), var(--accent), var(--accent-hover));
     animation: gradient-border 1.7s linear infinite;
     background-size: 400% 100%;
     color: transparent !important;
@@ -4518,6 +4563,13 @@ backdrop-filter:blur(5px);
     opacity: 0%;
 }
 
+.dark .tabANew:hover { 
+	border-bottom: 5px solid var(--accent) !important
+}
+
+#menuHolder {
+background-color: transparent !important}
+
 #windowHolder {
     content: " ";
     background-color: transparent !important;
@@ -4530,7 +4582,12 @@ backdrop-filter:blur(5px);
     transition-duration: 0.5s;
 }
 
-#windowHolder[style*="block"] {
+#instructionHolder {
+	background-color: rgb(0 0 0 / 10%) !important
+}
+
+
+#windowHolder[style*="block"]{
     position: fixed;
     content: " ";
     width: 100%;
@@ -4596,12 +4653,30 @@ backdrop-filter:blur(5px);
 	width: 145px;
 }
 
+#reloadMsg {
+	border: none !important
+}
+
 .noBtnCard:hover:after {
 	height: 100%;
 }
 
 .noBtnCard:hover>.sprayImg {
 	filter: grayscale(0);
+}
+
+#leaderDisplay {
+	background-color: rgb(0 0 0 / 40%);
+	border: 3px solid var(--accent);
+	border-radius: 10px
+}
+
+.leaderCounter, .leaderScore {
+	color: #fff !important
+}
+
+#curGameInfo {
+	display: none
 }
 
 /* Made by Shady#0690 */
