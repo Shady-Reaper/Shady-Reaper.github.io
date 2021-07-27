@@ -1693,18 +1693,27 @@ color: #fff
 	background-color: var(--background);
 }
 
-input:checked + .sliderSml::before {
-	background-color: var(--accent-hover);
-	position: fixed !important;
-	transform: scale(1.1)
+input:checked + .sliderSml::after {
+	color: var(--accent-hover);
+	transition: 0.3s
 }
 
 .sliderSml::before {
-	background-color: var(--accent);
-	transform: scale(1.1);
-	position: fixed !important;
-	top: 260px;
-	left: 70px
+	visibility: hidden
+}
+
+.sliderSml::after {
+	visibility: visible;
+	content: 'spectate';
+	color: var(--accent);
+	position: fixed;
+    right: 617px !important;
+    bottom: 420px;
+    transition: 0.3s;
+}
+
+#endUi {
+	background-color: transparent !important
 }
 
 #bigMFeatHBtnD {
@@ -2052,8 +2061,7 @@ background-color: transparent !important
 }
 
 #spectButton span {
-	color: #fff !important
-}
+color: #ff000000 !important}
 
 #signedInHeaderBar {
 	background-color: transparent
@@ -3448,19 +3456,6 @@ color: #fff
 
 .endCard {
 	background-color: var(--background);
-}
-
-input:checked + .sliderSml::before {
-	background-color: var(--accent-hover);
-	position: fixed !important;
-}
-
-.sliderSml::before {
-	background-color: var(--accent);
-	transform: scale(1.1);
-	position: fixed !important;
-	top: 260px;
-	left: 70px
 }
 
 #bigMFeatHBtnD {
