@@ -259,10 +259,6 @@ a {
 	color: var(--accent) !important
 } 
 
-.chatItem span {
-	color: #fff !important
-}
-
 #txtBubble,
 #policePopC {
 	color: var(--accent) !important;
@@ -2351,10 +2347,7 @@ color: #ff000000 !important}
 	color: var(--accent) !important
 }
 
-#chatHolder::webkitScrollbar,
-#uiBase.onMenu #chatHolder::webkitScrollbar {
-	display: none
-}
+
 
 #weapDisplay {
     bottom: 50%;
@@ -2721,6 +2714,10 @@ color: #ff000000 !important}
 	transform: scale(1) !important
 }
 
+#profilePicM {
+	filter: none !important
+}
+
 #updatingStream,
 #updatingStreamChat {
 	display: none !important
@@ -2740,7 +2737,6 @@ color: #ff000000 !important}
 }
 
 #chatList {
-	overflow: hidden;
 	border-radius: 0;
 	background: transparent
 }
@@ -2765,7 +2761,7 @@ color: #ff000000 !important}
 }
 
 #chatInput {
-	background: #00000069;
+	background: #00000069 /* hehe */;
 	border: hidden;
 	transition-duration: 0ms;
 	border-bottom: 2px solid #fff;
@@ -2775,7 +2771,6 @@ color: #ff000000 !important}
 }
 
 .chatItem[style] {
-	color: var(--accent) !important;
 	font-size: 18px;
 	width: -webkit-fill-available;
 	margin: 0;
@@ -2806,16 +2801,13 @@ color: #ff000000 !important}
 	color: #fff
 }
 
-.chatMsg div {
-	color: var(--accent) !important;
-}
 
 .click[style*="color:#b2f252"] {
 	color: var(--accent) !important;
 }
 
 .chatMsg span[style="color:#9eeb56"] {
-	color: var(--accent) !important;
+	color: #fff !important;
 	opacity: 0.75;
 }
 
@@ -3290,6 +3282,7 @@ div.krIcon {
     color: #fff;
 }
 
+
 #spinKR span {
     color: #fff !important
 }
@@ -3676,7 +3669,9 @@ input:checked + .sliderM {
 #slid_ropeCol,
 #slid_scopeBorderCol,
 .skinColorItem,
-#slid_progMOColor {
+#slid_progMOColor,
+#slid_crosshairColor,
+#slid_crosshairShadow {
 	height: 35px !important;
 	width: 35px !important;
 	border: 4px solid var(--accent) !important;
@@ -3687,6 +3682,71 @@ input:checked + .sliderM {
 .selectorItem img {
     transition: transform 0.2s;
   filter: drop-shadow(0 0 0.1rem var(--accent));
+}
+
+.compClassPItm,
+.compMenBtnS,
+.compPLstIcn,
+.compSwpTmB {
+	border: 4px solid var(--accent) !important;
+	background-color: transparent !important;
+}
+
+.compMenBtnS .material-icons {
+	color: var(--accent) !important
+}
+
+#compInfBox,
+#compTimBox,
+.compPLstSt,
+.compPLstCl {
+	color: var(--accent)
+}
+
+#cmpPartnerImg,
+#cmpDatBox {
+	display: none
+}
+
+#compInfBox {
+	visibility: hidden
+}
+
+#compInfBox::after {
+	visibility: visible;
+	content: 'Good Luck With Comp!';
+	position: fixed;
+    right: 41.2% !important;
+    bottom: 80%
+}
+
+.menuClassLevelBox {
+	background-color: transparent;
+}
+
+.cmpFlagIcL  {
+	display: none
+}
+
+.compPLstStR {
+	color: #fff !important
+}
+
+#roundsDisplay,
+#roundSub {
+	background-color: transparent !important;
+	color: var(--accent)
+}
+
+#compClassPHolder,
+#compBtnLst {
+	background-color: transparent
+}
+
+#selectorContainer, .selectorItem {
+  background-color: transparent!important;
+  filter: drop-shadow(0 0 0.15rem var(--accent));
+border: none 
 }
 
 .selectorItem:hover img {
@@ -4242,6 +4302,10 @@ span [style="color:#eb5656"] {
 	color: var(--accent) !important
 }
 
+.chatItem [style="color:#eb5656"] {
+	color: var(--accent) !important
+}
+
 #pingDisplay {
 	left: 3px;
 	position: relative
@@ -4672,6 +4736,61 @@ background-color: transparent !important}
 
 #curGameInfo {
 	display: none
+}
+
+.compPlWpIcn {
+        filter: brightness(0) drop-shadow(-2px 0px 1px var(--accent)) drop-shadow(2px 0px 1px var(--accent));
+        background-color: transparent !important
+}
+
+#speedRunReset {
+color: #fff !important;
+background-color: transparent
+}
+
+#speedRunRstKey {
+	color: var(--accent) !important
+}
+
+#speedRunTimer {
+	color: var(--accent) !important
+}
+
+#speedRunInfo {
+	color: #fff
+}
+
+[style="float:right;color:#fff"] {
+	color: var(--accent) !important
+}
+
+#spdrnZC {
+	color: var(--accent) !important
+}
+
+[style="color:#fff;font-size:30px;margin-left:10px"] {
+	color: var(--accent) !important
+}
+
+.speedRunITim {
+	color: var(--accent) !important
+}
+
+.speedRunItem {
+	color: #fff;
+	border-bottom: 3px solid var(--accent)
+}
+
+.sriAct {
+	background-color: var(--accent-hover)
+}
+
+#scoreZoneCount {
+	color: #fff
+}
+
+#scoreZoneCount .material-icons {
+	color: var(--accent) !important
 }
 
 /* Made by Shady#0690 */
