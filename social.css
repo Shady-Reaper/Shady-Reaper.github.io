@@ -15,11 +15,11 @@ please ctrl f whatever you need to find*/
 }
 
 [style$="color:rgb"] {
-    background-image: linear-gradient(to right,  #00FFFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00FFFF);animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}	@keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}
+    background-image: linear-gradient(to right,  var(--accent-hover), var(--accent));animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}	@keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}
 }
 
 .rainbowText {
-	background-image: linear-gradient(to right,  #00FFFF, #00A2FF, #0000FF, #0000FF, #00A2ff, #00FFFF);animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}@keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}
+	background-image: linear-gradient(to right,  var(--accent-hover), var(--accent));animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}@keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}
 }
 
 /* change both of the above gradients to whatever you want */
@@ -176,6 +176,8 @@ please ctrl f whatever you need to find*/
 	color: var(--accent) !important
 }
 
+
+
 .postPFP {
     border: none
 }
@@ -191,7 +193,7 @@ please ctrl f whatever you need to find*/
 }
 
 .terms {
-	display:none;
+	display: inline-block;
 }
 
 #givaButton {
@@ -309,7 +311,8 @@ span.lName {
 }
 
 .chatBlobI {
-    filter: brightness(1)
+    filter: brightness(1);
+    transform: scale(1) !important
 }
 
 #searchInputMO,
@@ -375,7 +378,10 @@ span.lName {
 	background: transparent !important;
 }
 
-
+#profileImg {
+	border: 4px solid var(--accent) !important;
+	transform: scale(1) !important
+}
 
 #sellPrceFee {
 	color: #fff !important
@@ -760,6 +766,15 @@ input[type=color] {
 	background-color: transparent !important
 }
 
+.chatBlobImg {
+	border: 4px solid var(--accent);
+	transform:scale(1) !important
+}
+
+.tooltipSubS {
+	color: var(--accent) !important
+
+}
 .leftMidHolder {
 	color: #fff
 }
@@ -952,7 +967,7 @@ input[type=color] {
 }
 
 #profileKR {
-	color: #fff
+	color: var(--accent)
 }
 
 .isAnim {
@@ -1996,7 +2011,8 @@ color: rgb(255 255 255)
 
 .chatBlobImg:hover {
 background-color: var(--accent) !important;
-opacity: 100 !important
+opacity: 1 !important;
+filter: brightness(1.2)
 }
 
 .chatItInfo {
@@ -2011,6 +2027,10 @@ opacity: 100 !important
 
 .mapsVotes {
 	transform: scale(1.2)
+}
+
+#editrDB {
+	display: none
 }
 
 .offerHolder {
@@ -2081,7 +2101,7 @@ opacity: 100 !important
 }
 
 #chatScroller {
-	left: -80px;
+	left: -97px;
 	transition: 0.3s;
 	width: 100px
 }
@@ -2095,10 +2115,22 @@ opacity: 100 !important
     color: var(--accent) !important
 }
 
+[style="background:#27ab32;"] {
+	background: #00ff00 !important
+}
+
+chatBlobI {
+	color: #fff !important
+}
+
 #chatScroller:hover {
 width: 100px;
 left: 0px;
 transform: 0.3s
+}
+
+#chatScroller {
+	width: 120px !important
 }
 
 #chatScroller::before {
@@ -2106,11 +2138,20 @@ transform: 0.3s
 	position: absolute;
 	bottom: 700px;
 	color: var(--accent);
-	left: 79px;
+	left: 98px;
+	width: 100px;
     border-top: 20px solid #00000000;
     border-left: 25px solid var(--accent);
     border-bottom: 20px solid transparent;
        transform: rotate(180deg) !importan;
+}
+
+#feedTabs {
+	width: 1000px
+}
+
+[style="background:#27ab32;margin-top:-8px;vertical-align:middle;"] {
+	background: #00FF00 !important
 }
 
 #postHolder {
@@ -2148,6 +2189,7 @@ background: rgb(0 0 0 / 40%)
     left:-10%;
     margin-top:10px !important;
 }
+
 #navTitle {
     right:50%;
     transform:translate(50%);
@@ -2520,12 +2562,20 @@ textarea#tMsg {
 	transform: scale(1) !important
 }
 
-#o_his.offers, #leaderList .scrollItem, .regionCard, [style="text-align: left;position: absolute;width: 800px;left: 50%;transform: translateX(-50%);"] {
+#o_his.offers, #leaderList .scrollItem, .regionCard, [style="text-align: left;position: absolute;width: 800px;left: 50%;transform: translateX(-50%);"], .rareItems {
 	        background-image: linear-gradient(to left, var(--accent), var(--accent-hover));
 }
 
 [style="width:680px;padding-top:20px;padding-bottom:15px;overflow:hidden;max-height:unset;"] {
 	        background-image: linear-gradient(to left, var(--accent), var(--accent-hover));
+}
+
+#clanwarsProg {
+	background-color: transparent !important
+}
+
+.xpBarV {
+	color: #fff
 }
 
 #items, #clanwars {
