@@ -211,6 +211,20 @@ a {
 	display: none;
 }
 
+.standout {
+visibility: hidden;
+}
+
+.standout::after {
+	visibility: visible;
+	content: 'Css by Shady#0690';
+	font-size: 18px;
+	bottom: -2px;
+	position: relative;
+	opacity: 0.02;
+	color: var(--accent)
+}
+
 .terms {
 	font-size: 0;
 	transition-duration: 0.25s;
@@ -254,10 +268,6 @@ a {
 	left: px !important;
 	bottom: -10px
 }
-
-[style="color:#9eeb56"] {
-	color: var(--accent) !important
-} 
 
 #txtBubble,
 #policePopC {
@@ -455,9 +465,29 @@ background-color: transparent !important;
 	border-radius: 20px !important
 }
 
+.keyIcon {
+	background-color: transparent;
+	text-shadow: none;
+	box-shadow: none;
+	padding: none !important;
+	border: none;
+}
+
+.bindSep {
+	background-color: var(--accent) !important
+}
+
+.setSugBox2 {
+	border: 3px solid var(--accent);
+}
+
+.setSugBox2:hover {
+	border: 3px solid var(--accent);
+	opacity: 1;
+}
+
 .setSugInf {
 	color: #00FFFF !important;
-	text-align: center !important;
 	right: -5px;
 }
 
@@ -1050,7 +1080,7 @@ input:checked + .matchVoteThumb {
 }
 
 .mapListThumb:hover, .hostMapImg:hover {
-	filter: grayscale(0)
+	filter: grayscale(0);
 }
 
 .hostMapImg:hover {
@@ -2011,9 +2041,6 @@ a {
     background-color: transparent !important;
 }
 
-
-
-
 #menuPingText,
 #menuFPS {
     color: var(--accent) !important
@@ -2257,7 +2284,7 @@ color: #ff000000 !important}
     position: fixed;
     transform: translateX(-50%) scale(1.2);
     top: 85%;
-    left: 50%;
+    left: 49.2%;
     background-color: transparent;
     text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
 }
@@ -2619,6 +2646,10 @@ color: #ff000000 !important}
 	border-radius: 30px
 }
 
+.hostMap:hover {
+    border: 2px solid var(--accent)
+}
+
 #menuWindow b {
 	color: #fff !important
 }
@@ -2825,7 +2856,6 @@ color: #ff000000 !important}
 
 .chatMsg span[style="color:#9eeb56"] {
 	color: #fff !important;
-	opacity: 0.75;
 }
 
 #chatInput {
@@ -3664,7 +3694,8 @@ input:checked + .sliderM {
 .skinColorItem,
 #slid_progMOColor,
 #slid_crosshairColor,
-#slid_crosshairShadow {
+#slid_crosshairShadow,
+#slid_xpBarCol2 {
 	height: 35px !important;
 	width: 35px !important;
 	border: 4px solid var(--accent) !important;
@@ -3877,11 +3908,13 @@ border: none
 }
 
 .matchVoteThumb:hover {
-	filter: grayscale(0)
+	filter: grayscale(0);
+	border: 2px solid var(--accent) !important
 }
 
 input:checked + .matchVoteThumb {
-	filter: grayscale(0)
+	filter: grayscale(0);
+	border: 2px solid var(--accent) !important
 }
 
 #killCard {
@@ -4082,9 +4115,28 @@ th {
 	color: var(--accent);
 	transform: scale(0.9)
 }
+.rnkShpHed {
+    background: linear-gradient(to right, #00000094, var(--accent), var(--accent-hover), #00000094)
+}
+
+.endTableFlag {
+	display: none
+}
+
+[style="color:#9eeb56"] {
+	color: #fff !important
+}
+
+#mapList {
+	color: var(--accent) !important
+}
 
 input:checked + .matchVoteThumb {
 	filter: grayscale(0) !important;
+}
+
+.endTablePfp {
+	display: none !important
 }
 
 .newLeaderCounter {
@@ -4267,6 +4319,14 @@ input:checked + .matchVoteThumb {
 #itemOpenBtn,
 #itemPurchBtn {
 	color: var(--accent);
+}
+
+#spectHPB, #spectHPBI {
+	border-radius: 10px
+}
+
+#spectHPBI {
+	background-color: var(--accent) !important
 }
 
 .itemViewSea {
@@ -4454,7 +4514,7 @@ backdrop-filter:blur(5px);
 
 .optImg {
 	transform: scale(1.1);
-	top: -1.4px;
+	top: -1.1px;
 	right: 1px;
 	border-radius: 30px
 }
@@ -4868,6 +4928,10 @@ border: none !important}
 	color: #fff !important
 }
 
+[style="color:rgba(255,255,255,0.4);font-size:16px;margin-top:4px;max-width:500px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;"] {
+	color: #fff !important
+}
+
 [style="color:#d4d4d4;font-size:16px;text-align:center;margin-bottom:10px;margin-top:10px;"] {
 	color: #fff !important
 }
@@ -4886,6 +4950,122 @@ border: none !important}
 
 #lC-cont {
     transform: scale(1.3)
+}
+
+#stickyHostH {
+	border-top: 3px solid var(--accent)
+}
+
+#startServBtn {
+	background transparent !important
+}
+
+.serverCardInfo {
+	background-color: transparent
+}
+
+#vouchPop {
+	background-color: var(--background);
+	border: 3px solid var(--accent);
+	z-index: 999999999
+}
+
+#redVouch {
+	text-align: center
+}
+
+#vouchPop div {
+	color: #fff !important
+}
+
+.topRightCounters {
+    position: unset;
+    bottom: unset;
+    right: unset;
+}
+
+.countIcon {
+    background-color: transparent;
+    border-radius: 0;
+    margin-left: 20px;
+    margin-bottom: 0;
+    padding: 7px;
+}
+
+#deathsVal,
+#killsVal,
+#livesDisp,
+#streakVal,
+#myScoreVal {
+    color: #fff !important;
+    bottom: 40px;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+    transform: scale(0.8)
+}
+
+#deathsVal::after,
+#killsVal::after,
+#streakVal::after,
+#myScoreVal::after,
+#livesDisp::after {
+    display: block;
+    position: fixed;
+    margin-top: 45px;
+    font-size: 14px;
+    text-shadow: 2px 2px 3px rgba(30, 30, 30, .5);
+}
+
+#deathsVal::after {
+    content: 'Deaths';
+    color: var(--accent)
+}
+
+#killsVal::after {
+    content: 'Kills';
+    color: var(--accent)
+}
+
+#streakVal::after {
+    content: 'Streak';
+    color: var(--accent)
+}
+
+#myScoreVal::after {
+    content: 'Score';
+    color: var(--accent)
+}
+
+#livesDisp::after {
+    content: 'Lives';
+    color: var(--accent)
+}
+
+#killsIcon,
+#deathsIcon,
+#streakIcon,
+#scoreCount .material-icons,
+#livesCount .material-icons {
+    opacity: 0
+}
+
+.serverCard {
+	border: 2px solid var(--accent);
+	border-radius: 10px
+}
+
+#tScoreF2 {
+	color: var(--accent-hover) !important
+}
+
+#tScoreF1 {
+	color: var(--accent) !important
+}
+
+#kCInfoS {
+	color: var(--accent) !important
 }
 
 /* Made by Shady#0690 */
