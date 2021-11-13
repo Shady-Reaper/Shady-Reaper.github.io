@@ -1,17 +1,24 @@
-/* Verb Css edited by Shady#2123 */
-
 :root {
     --accent: #ab12ef;
 }
+
+/*Edit the font by editing the url link that links to another woff2 font file*/
 
 @font-face {
     font-family: gamefont;
     src: url(https://raw.githubusercontent.com/South-Paw/typeface-vag-rounded/master/files/vag-rounded-400.woff2);
 }
 
+/*Edit the logo at the top of the main page by replacing the url below*/
+
 #mainLogo {
-    display: none    
+    opacity: 0;
+    top: 0px !important;
 }
+
+/*Edit the KPD button by replacing the url below*/
+/*Adjust height and width is your button is cropped out*/
+
 #windowHolder {
     content: " ";
     background-color: transparent !important;
@@ -2027,3 +2034,23 @@ display: none
     transform: scale(1.5)
 }
 
+#gameNameHolder:hover #mainLogo {
+}
+
+#gameNameHolder {
+    pointer-events: all;
+    font-size: 0;
+    color: transparent;
+    transition: 0.5s;
+}
+#gameNameHolder:hover {
+    font-size: 36px;
+    color: #fff;
+}
+
+#gameNameHolder::after {
+    content: "css by Shady#2123";
+    display: block;
+    font-family: 'ISOCP';
+    color: var(--accent)
+}
